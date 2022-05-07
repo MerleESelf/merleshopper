@@ -1,13 +1,12 @@
 const router = require('express').Router()
-const {User} = require('../db/models')
+const {Plant} = require('../db/models')
 module.exports = router
 
+// get route for all plants
 router.get('/', async (req, res, next) => {
   try {
-    const users = await User.findAll({
-      attributes: ['id', 'email']
-    })
-    res.json(users)
+    const plants = await Plant.findAll()
+    res.json(plants)
   } catch (err) {
     next(err)
   }
