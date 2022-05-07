@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const CartDetails = db.define('cartDetail', {
+const CartDetail = db.define('cartDetail', {
   quantity: {
     type: Sequelize.INTEGER,
     validate: {
@@ -10,4 +10,4 @@ const CartDetails = db.define('cartDetail', {
   }
 })
 
-module.exports = CartDetails
+module.exports = CartDetail
