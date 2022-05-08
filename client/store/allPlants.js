@@ -20,3 +20,14 @@ export const getAllPlants = () => {
     dispatch(fetchAllPlants(plants))
   }
 }
+
+// reducer
+
+export default function(state = [], action) {
+  switch (action.type) {
+    case GET_ALL_PLANTS:
+      return action.plants
+    default:
+      return state
+  }
+}
