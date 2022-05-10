@@ -33,7 +33,7 @@ const Plant = db.define('plant', {
       min: 0
     }
   },
-  picture: {
+  image: {
     type: Sequelize.STRING,
     allowNull: false,
     defaultValue:
